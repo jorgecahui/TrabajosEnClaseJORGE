@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.upeu.syscenterlife.util;
 
 import java.io.File;
@@ -13,10 +9,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
 
-/**
- *
- * @author Lab-IoT
- */
 public class UtilsX {
 
     public URL getFile(String ruta) {
@@ -70,5 +62,4 @@ public class UtilsX {
         }
         return idioma;
     }
-
 }

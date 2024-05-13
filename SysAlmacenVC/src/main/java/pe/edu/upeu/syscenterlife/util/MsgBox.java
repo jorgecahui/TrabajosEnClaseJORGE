@@ -37,6 +37,6 @@ public class MsgBox {
 
     public static void main(String[] args) {
         //MsgBox msgBox = new MsgBox("Mensaje", JOptionPane.ERROR_MESSAGE, "img/secrecy-icon.png");
-        MsgBox msgBox = new MsgBox("GAAAA", JOptionPane.INFORMATION_MESSAGE, "");
+        MsgBox msgBox = new MsgBox("Probando.....", JOptionPane.CANCEL_OPTION, "");
     }
 }

@@ -32,7 +32,7 @@ import pe.edu.upeu.syscenterlife.util.UtilsX;
 
 /**
  *
- * @author Lab-IoT
+ * @author Datos
  */
 @Component
 public class Login extends javax.swing.JFrame {
@@ -49,9 +49,6 @@ public class Login extends javax.swing.JFrame {
     @Autowired
     GUIMain gUIMain;
 
-    /**
-     * Creates new form Login
-     */
     public Login() {
         initComponents();
         this.setTitle("Formulario de Ingreso-SysCenterlife");
@@ -68,6 +65,7 @@ public class Login extends javax.swing.JFrame {
             };
         } catch (Exception e) {
         }
+        
         txtPassword = new MyPasswordField();
         loginButton = new Button();
         loginButton.setFont(new Font("sansserif", 1, 20));
@@ -81,7 +79,6 @@ public class Login extends javax.swing.JFrame {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setSize(new Dimension(screenSize.width / 2, (screenSize.height - 36) / 2));
         this.setLocationRelativeTo(null);
-
     }
 
     public void addEventListeners() {
@@ -90,8 +87,8 @@ public class Login extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (txtUsername.getText().equals("admin")
                         && String.valueOf(txtPassword.getPassword()).equals("admin")) {
-                    //gUIMain.setContexto(ctx);
-                    //gUIMain.setVisible(true);
+                    gUIMain.setContexto(ctx);
+                    gUIMain.setVisible(true);
                     dispose();
                 } else {
                     new MsgBox("Error al ingresar!", NORMAL, "");
