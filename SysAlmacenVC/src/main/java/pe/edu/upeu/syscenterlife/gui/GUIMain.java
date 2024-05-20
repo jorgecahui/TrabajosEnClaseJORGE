@@ -22,6 +22,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 import pe.edu.upeu.syscenterlife.modelo.MenuMenuItenTO;
@@ -141,6 +142,7 @@ public class GUIMain extends JFrame {
         public void actionPerformed(ActionEvent e) {
             System.out.println("pasa por aqui");
             Container contai = GUIMain.this.getContentPane();
+            
             if (((JMenuItem) e.getSource()).getName()
                     .equals("micliente")) {
                 System.out.println("Holas si llega");

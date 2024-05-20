@@ -18,7 +18,6 @@ import org.springframework.stereotype.Component;
 import pe.edu.upeu.syscenterlife.modelo.Cliente;
 import pe.edu.upeu.syscenterlife.servicio.ClienteService;
 
-
 @Component
 public class MainCliente extends javax.swing.JPanel {
 
@@ -39,13 +38,12 @@ public class MainCliente extends javax.swing.JPanel {
         }
         
     }
-    
+
     public void setContexto(ConfigurableApplicationContext ctx){
-    this.ctx=ctx;
-    listarClientes();
-
-}
-
+        this.ctx=ctx;
+        listarClientes();
+    }
+    
     public void listarClientes() {
         List<Cliente> listarCleintes = clienteService.listarEntidad();
         if (listarCleintes != null) {
@@ -365,7 +363,7 @@ public class MainCliente extends javax.swing.JPanel {
                         "  Mensaje de confirmación", JOptionPane.OK_CANCEL_OPTION,
                         JOptionPane.INFORMATION_MESSAGE) == 0) {
                     modelo.removeRow(rowx);
-                    clienteService.eliminarEntidad(valor.toString());
+                    clienteService.eliminarRegEntidad(valor.toString());
                     resetForm();
                 }
             } catch (Exception e) {

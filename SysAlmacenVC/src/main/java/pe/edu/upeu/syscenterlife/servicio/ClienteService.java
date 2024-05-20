@@ -1,4 +1,3 @@
-
 package pe.edu.upeu.syscenterlife.servicio;
 
 import java.util.List;
@@ -7,13 +6,11 @@ import org.springframework.stereotype.Service;
 import pe.edu.upeu.syscenterlife.modelo.Cliente;
 import pe.edu.upeu.syscenterlife.repositorio.ClienteRepository;
 
-
 @Service
 public class ClienteService {
     
     @Autowired
     ClienteRepository clienteRepository;
-    
     //Create
     public Cliente guardarEntidad(Cliente cliente){
     return clienteRepository.save(cliente);
@@ -27,12 +24,11 @@ public class ClienteService {
     return clienteRepository.save(cliente);
     }
     //Delete
-    public void eliminarEntidad(String dniruc){
+    public void eliminarRegEntidad(String dniruc){
         clienteRepository.delete(clienteRepository.findById(dniruc).get());
     }
     //Buscar
     public Cliente buscarCliente(String dniruc){
         return clienteRepository.findById(dniruc).get();
     }
-    
 }
