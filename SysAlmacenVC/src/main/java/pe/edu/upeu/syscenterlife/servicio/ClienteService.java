@@ -31,4 +31,9 @@ public class ClienteService {
     public Cliente buscarCliente(String dniruc){
         return clienteRepository.findById(dniruc).get();
     }
+    //Buscar
+    public List<Cliente> buscarClienteNombre(String nombre){
+        return clienteRepository.findByNombre("%"+nombre+"&");
+    } 
 }
+
